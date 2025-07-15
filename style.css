@@ -1,0 +1,296 @@
+/* Custom styles for the Inter font and overall layout */
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(to bottom right, #1f2937, #374151); /* Degradado de fondo */
+    color: #e5e7eb; /* Color de texto claro para el body */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem; /* Espaciado general */
+    margin: 0; /* Elimina el margen por defecto del body */
+    transition: background 0.5s ease-in-out; /* Transición suave para cambios de fondo */
+}
+
+.main-container {
+    background-color: #fff; /* Fondo blanco para el contenedor principal */
+    padding: 2.5rem; /* Relleno interno ligeramente mayor */
+    border-radius: 0.75rem; /* Esquinas más redondeadas */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3), 0 10px 15px -5px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada e impactante */
+    width: 100%; /* Ancho completo */
+    max-width: 72rem; /* Ancho máximo aumentado para un diseño más espacioso */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    margin-top: 1rem; /* Margen superior para separar de la navegación */
+    animation: fadeIn 0.8s ease-out; /* Animación de aparición */
+    overflow-y: auto; /* Permite el scroll si el contenido es muy largo */
+    max-height: 90vh; /* Limita la altura del contenedor principal para que quepa en la pantalla */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 2.8rem; /* Tamaño de fuente más grande para el H1 */
+    font-weight: 700; /* Negrita */
+    color: #047857; /* Color verde */
+    margin-bottom: 1.5rem; /* Margen inferior aumentado */
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem; /* Tamaño de fuente para subtítulos de página */
+    font-weight: 600;
+    color: #059669; /* Verde ligeramente más claro */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h3 { /* Style for questions/subheadings */
+    font-size: 1.5rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    color: #047857; /* text-green-700 */
+    margin-top: 2rem; /* Increased margin-top */
+    margin-bottom: 0.75rem; /* Increased margin-bottom */
+    text-align: center; /* Centered for better flow with images */
+}
+
+p {
+    font-size: 1.125rem;
+    color: #4b5563; /* Gris oscuro */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.6; /* Mayor interlineado para legibilidad */
+}
+
+.sustainability-text { /* Specific style for answers in sustainability page and now for purpose page */
+    font-size: 1rem; /* text-base */
+    color: #374151; /* text-gray-700 */
+    text-align: center; /* Centered for better flow with images */
+    margin-bottom: 1.5rem; /* Increased margin-bottom */
+    max-width: 80%; /* Limit text width for better readability on wide screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 1rem; /* Mayor padding */
+    margin-bottom: 1.5rem; /* Mayor margen inferior */
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem; /* Más redondeado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    outline: none;
+    color: #111827; /* Texto oscuro */
+    transition: all 0.3s ease-in-out; /* Transición más suave */
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 0 6px rgba(134, 239, 172, 0.7); /* Anillo de enfoque más prominente */
+    border-color: #10b981;
+}
+
+button {
+    width: 100%;
+    background-color: #059669; /* Verde */
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 1.5rem; /* Mayor padding */
+    border-radius: 0.75rem; /* Más redondeado */
+    box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.25); /* Sombra más profunda */
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #047857; /* Verde más oscuro al pasar el ratón */
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4); /* Sombra más grande al pasar el ratón */
+    transform: translateY(-3px); /* Ligero levantamiento */
+}
+
+button:focus {
+    box-shadow: 0 0 0 6px rgba(134, 239, 172, 0.7);
+}
+
+.results-div { /* Renamed from #results to a class for reusability */
+    margin-top: 2.5rem; /* Mayor margen superior */
+    padding: 1.5rem; /* Mayor padding */
+    background-color: #f0fdf4; /* Fondo verde muy claro */
+    border-radius: 0.75rem; /* Esquinas más redondeadas */
+    border: 1px solid #dcfce7;
+    color: #14532d; /* Texto verde oscuro */
+    min-height: 100px; /* Altura mínima mayor */
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1); /* Sombra interna más visible */
+    box-sizing: border-box;
+    line-height: 1.6; /* Mayor interlineado para legibilidad */
+}
+
+.results-div p.initial-message,
+.results-div p.loading-message,
+.results-div p.error-message {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.results-div p.initial-message {
+    color: #6b7280; /* Gris */
+}
+.results-div p.loading-message {
+    color: #6b7280; /* Gris */
+}
+
+.results-div p.user-query {
+    color: #064e3b; /* Verde oscuro */
+    font-weight: 600;
+    margin-bottom: 1rem; /* Espacio debajo de la consulta del usuario */
+}
+
+.results-div p.gemini-response {
+    color: #14532d; /* Verde oscuro */
+    margin-top: 0.5rem;
+}
+
+.results-div p.text-red-600 {
+    color: #dc2626; /* Rojo */
+}
+
+/* Navigation styles */
+nav {
+    background-color: #1f2937; /* Fondo oscuro para la barra de navegación */
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Espacio entre botones de navegación aumentado */
+    margin-bottom: 1.5rem; /* Margen inferior para separar del contenido principal */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+}
+
+nav button {
+    background-color: #374151; /* Color de botón de navegación */
+    color: #e5e7eb;
+    padding: 0.7rem 1.4rem; /* Padding aumentado */
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: none; /* Eliminar sombra extra */
+    width: auto; /* Ancho automático para botones de navegación */
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+nav button:hover {
+    background-color: #4b5563; /* Color al pasar el ratón */
+    transform: translateY(-2px); /* Ligero levantamiento */
+}
+
+nav button.active {
+    background-color: #059669; /* Color activo */
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    transform: translateY(-1px);
+}
+
+/* Page specific styles */
+.page-content {
+    display: none; /* Oculta todas las páginas por defecto */
+}
+
+.page-content.active {
+    display: block; /* Muestra la página activa */
+}
+
+/* Image and text layout for info items */
+.info-item {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 3rem; /* Increased space between info items */
+    animation: fadeInUp 0.8s ease-out forwards; /* Apply animation */
+    opacity: 0; /* Start hidden for animation */
+    background-color: #f9fafb; /* Light background for each info item card */
+    padding: 1.5rem; /* Padding inside the info item */
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for info cards */
+}
+
+.image-container { /* Container for image and loading spinner */
+    position: relative;
+    width: 100%; /* Take full width of parent info-item */
+    max-width: 600px; /* Max width for images */
+    height: 350px; /* Fixed height for consistent layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0; /* Placeholder background */
+    border-radius: 0.75rem;
+    overflow: hidden; /* Hide overflow from image */
+    margin-bottom: 1.5rem;
+}
+
+.info-image {
+    max-width: 100%; /* Ensure image is responsive */
+    max-height: 100%; /* Ensure image fits within container */
+    width: auto;
+    height: auto;
+    border-radius: 0.75rem; /* More rounded corners for images */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for images */
+    object-fit: cover; /* Ensure image covers the area, cropping if necessary */
+    display: block; /* Ensure image behaves as a block */
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #6b7280;
+    font-size: 1rem;
+    z-index: 10; /* Ensure it's above the image */
+}
+/* Basic spinner animation */
+.loading-spinner::after {
+    content: ' ⏳'; /* Or a more complex CSS spinner */
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animation delays for staggered appearance on Information page */
+#informationPage .info-item:nth-child(1) { animation-delay: 0.1s; }
+#informationPage .info-item:nth-child(2) { animation-delay: 0.2s; }
+#informationPage .info-item:nth-child(3) { animation-delay: 0.3s; }
+#informationPage .info-item:nth-child(4) { animation-delay: 0.4s; }
+#informationPage .info-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Animation for the results div on the Purpose page */
+#purposeResults.show-result {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Specific style for the "How it works" section in Purpose page */
+#purposePage .info-item {
+    background-color: #e6ffe6; /* Lighter background for this specific info-item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 3rem; /* More space from the input/button section */
+    padding: 1.5rem;
+}
+
+#purposePage .info-item h3 {
+    color: #059669; /* Slightly different green for this heading */
+    margin-top: 0; /* Remove top margin as it's part of the card */
+}
