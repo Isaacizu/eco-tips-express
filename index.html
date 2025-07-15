@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTips Express</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to external custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="mainNav">
+        <button id="navPurpose" class="active">Propósito</button>
+        <button id="navInformation">Información</button>
+    </nav>
+
+    <div class="main-container">
+        <!-- Propósito Page -->
+        <div id="purposePage" class="page-content active">
+            <h1>EcoTips Express</h1>
+            <p>
+                ¡Bienvenido a EcoTips Express! Aquí podrás solicitar consejos rápidos sobre temas de sostenibilidad.
+                Introduce un tema o pregunta para obtener un eco-consejo general.
+            </p>
+            <input type="text" id="purposeTipInput" placeholder="Escribe tu pregunta o tema aquí..." />
+            <button id="purposeGetTipButton">Obtener Eco-Consejo</button>
+            <div id="purposeResults" class="results-div">
+                <p class="initial-message">Los resultados aparecerán aquí.</p>
+            </div>
+
+            <div class="info-item"> <!-- Wrapped "How it works" in info-item for consistent styling -->
+                <h3>¿Cómo funciona esta página web?</h3>
+                <p class="sustainability-text">
+                    Esta página web está diseñada para ser tu guía en el mundo de la sostenibilidad. En la sección "Propósito", puedes hacer cualquier pregunta general. La sección de "Información" te ofrece datos clave sobre la sostenibilidad. Simplemente escribe tu pregunta o el tema que te interese en el campo de texto y haz clic en el botón para obtener un eco-consejo personalizado.
+                </p>
+            </div>
+        </div>
+
+        <!-- Información Page -->
+        <div id="informationPage" class="page-content">
+            <h2>Información: Entendiendo el Impacto Positivo</h2>
+            <p>
+                La sostenibilidad es un camino hacia un futuro mejor para todos. Aprender sobre ella es el primer paso para generar un cambio positivo.
+            </p>
+
+            <div class="info-item">
+                <h3>¿Qué es sostenibilidad?</h3>
+                <div class="image-container">
+                    <img id="https://i.pinimg.com/736x/3b/e1/e5/3be1e5c0df56b656cb5de4ecfacb40d1.jpg" src="" alt="Cargando imagen de Sostenibilidad..." class="info-image">
+                    <div class="loading-spinner" id="sustainabilityImageLoading">Cargando imagen...</div>
+                </div>
+                <p class="sustainability-text">
+                    La sostenibilidad es la capacidad de satisfacer las necesidades del presente sin comprometer la capacidad de las futuras generaciones para satisfacer sus propias necesidades. Implica un equilibrio entre el crecimiento económico, el cuidado del medio ambiente y el bienestar social.
+                </p>
+            </div>
+
+            <div class="info-item">
+                <h3>¿Para qué sirve?</h3>
+                <div class="image-container">
+                    <img id="https://i.pinimg.com/736x/e5/d7/49/e5d749b21ad12289f5ae3c3ea8405eb3.jpg" src="" alt="Cargando imagen de Propósito..." class="info-image">
+                    <div class="loading-spinner" id="purposeImageLoading">Cargando imagen...</div>
+                </div>
+                <p class="sustainability-text">
+                    Sirve para asegurar un futuro habitable y próspero. Nos ayuda a gestionar los recursos de manera responsable, reducir la contaminación, proteger la biodiversidad y crear comunidades más justas y equitativas. Es clave para enfrentar desafíos como el cambio climático y la escasez de recursos.
+                </p>
+            </div>
+
+            <div class="info-item">
+                <h3>¿Cómo me puede beneficiar?</h3>
+                <div class="image-container">
+                    <img id="https://i.pinimg.com/1200x/4c/33/5a/4c335ae1eb6499b4ad2042584746dc35.jpg" src="" alt="Cargando imagen de Beneficios..." class="info-image">
+                    <div class="loading-spinner" id="benefitsImageLoading">Cargando imagen...</div>
+                </div>
+                <p class="sustainability-text">
+                    La sostenibilidad te beneficia de muchas maneras: mejora tu salud al reducir la exposición a contaminantes, te permite ahorrar dinero a través de un consumo más eficiente (agua, energía), fomenta la innovación, y contribuye a un planeta más sano y con más recursos para ti y las generaciones futuras. Además, genera un sentido de propósito y bienestar al saber que contribuyes a algo positivo.
+                </p>
+            </div>
+
+            <div class="info-item">
+                <h3>¿Por qué cuidar el ambiente?</h3>
+                <div class="image-container">
+                    <img id="https://i.pinimg.com/736x/df/82/f3/df82f30bb09872fd78e513b6102a6cb5.jpg" src="" alt="Cargando imagen de Cuidado Ambiental..." class="info-image">
+                    <div class="loading-spinner" id="careImageLoading">Cargando imagen...</div>
+                </div>
+                <p class="sustainability-text">
+                    Cuidar el ambiente es fundamental porque nuestra existencia depende directamente de él. Nos provee de aire limpio, agua potable, alimentos, medicinas y un clima estable. Un ambiente sano es sinónimo de salud humana, estabilidad económica y calidad de vida. Protegerlo es protegernos a nosotros mismos y asegurar un legado positivo para las futuras generaciones.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js" defer></script>
+</body>
+</html>
